@@ -7,13 +7,14 @@ dynasty_teams = {
     "Lakers": 1610612747,
     "Bulls": 1610612741,
     "Spurs": 1610612759,
-    "Warriors": 1610612744
+    "Warriors": 1610612744,
+    "Celtics": 1610612738
 }
 
 # Loop used to get target team IDs from the API
 
 # all_teams = nba_teams.get_teams()
-# target_teams = {"Lakers", "Bulls", "Spurs", "Warriors"}
+# target_teams = {"Lakers", "Bulls", "Spurs", "Warriors", "Celtics"}
 # for team in all_teams:
 #     if team["nickname"] in target_teams:
 #         print(team)
@@ -28,6 +29,7 @@ for team_name, team_id in dynasty_teams.items():
     print(df.shape)
     print(df.head())
     print(df.isnull().sum())
+
 
 for team_name, df in teams.items():
     df.to_csv(f"data/{team_name}.csv", index=False)
